@@ -23,7 +23,7 @@ Module Connection
     End Sub
 
     Sub DBConn_MsSQL()  ''COnnection For Ms SQL Server
-        db_string = "Data Source=WJT-01\SQLEXPRESS;Initial Catalog=customer;User ID=sa;Password=12345;"
+        db_string = "Data Source=YOURPC\SQLEXPRESS;Initial Catalog=customer;User ID=sa;Password=12345;"
         Conn2 = New SqlConnection(db_string)
 
         Try
@@ -35,8 +35,8 @@ Module Connection
 
     End Sub
 
-    Sub DBConn_MySQL()
-        db_string = "server=localhost;user=root;password=wishimajaya;port=3307;database=ma star;"
+    Sub DBConn_MySQL() '' Connection Mysql
+        db_string = "server=localhost;user=root;password=yourpassword;port=3307;database=ma star;"
         Conn3 = New MySqlConnection(db_string)
         Try
             Conn3.Open()
@@ -47,7 +47,7 @@ Module Connection
     End Sub
 
     Sub DBConn_PgSQL()
-        db_string = "Server=localhost;Port=5432;Database=customer;username=postgres;password=wishimajaya"
+        db_string = "Server=localhost;Port=5432;Database=customer;username=postgres;password=yourpassword"
         Conn4 = New NpgsqlConnection(db_string)
 
         Try
